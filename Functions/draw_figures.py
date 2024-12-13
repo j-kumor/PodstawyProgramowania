@@ -1,39 +1,51 @@
 import turtle
-import figures
+from figures import draw_square, draw_triangle, draw_rectangle
 
 # Set up the screen
 window = turtle.Screen()
 window.bgcolor("lightgreen")
 
+# Create the turtle
 pen = turtle.Turtle()
 pen.speed(5)
 
+# Draw figures
+# Draw the first square
+pen.penup()
+pen.goto(-200, 200)
+pen.pendown()
+draw_square(pen, 100)
 
-def move_turtle(x, y):
-    pen.penup()
-    pen.setx(x)
-    pen.sety(y)
-    pen.pendown()
+# Draw the second square
+pen.penup()
+pen.goto(100, 200)
+pen.pendown()
+draw_square(pen, 100)
 
+# Draw the first triangle
+pen.penup()
+pen.goto(-200, 50)
+pen.pendown()
+draw_triangle(pen, 100)
 
-move_turtle(-200, 100)  # First location
-figures.draw_square(pen, 100)
+# Draw the second triangle
+pen.penup()
+pen.goto(100, 50)
+pen.pendown()
+draw_triangle(pen, 100)
 
-move_turtle(100,300)
-figures.draw_square(pen, 100)
+# Draw the first rectangle
+pen.penup()
+pen.goto(-200, -150)
+pen.pendown()
+draw_rectangle(pen, 150, 100)
 
-move_turtle(200, 200)
-figures.draw_trangle(pen, 100)
+# Draw the second rectangle
+pen.penup()
+pen.goto(100, -150)
+pen.pendown()
+draw_rectangle(pen, 150, 100)
 
-move_turtle(-200, -200)
-figures.draw_trangle(pen, 100)
-
-move_turtle(200, -200)
-figures.draw_rectangle(pen, 40, 100)
-
-move_turtle(-100, 200)
-figures.draw_rectangle(pen, 40, 100)
-
-# keep the window open
+# Hide the turtle and finish
 pen.hideturtle()
 window.mainloop()
