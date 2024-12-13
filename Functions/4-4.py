@@ -4,26 +4,21 @@
 
 
 def sum_digits(number):
-    total = 0  # Inicjalizacja sumy na 0
+    total = 0  
     
-    # Pobranie wartości bezwzględnej liczby, aby obsłużyć liczby ujemne
     abs_number = abs(number)
     
-    # Konwertowanie liczby bezwzględnej na ciąg znaków, aby przejść po jej cyfrach
     string_num = str(abs_number)
     
-    # Iterowanie po każdym znaku (cyfrze) w ciągu znaków reprezentującym liczbę
     for i in string_num:
-        total += int(i)  # Konwertowanie znaku z powrotem na liczbę i dodawanie jej do sumy
+        total += int(i)  # Converting the sign back to a place and adding it to the sum
     
-    return total  # Zwracanie całkowitej sumy cyfr
+    return total  
 
 
-# Pobranie liczby od użytkownika
-any_number = int(input('Wprowadź liczbę: '))
 
-# Wywołanie funkcji sum_digits i zapisanie wyniku
+any_number = int(input('Number: '))
+
 result = sum_digits(any_number)
 
-# Wydrukowanie wyniku
-print(f'Suma cyfr liczby {any_number} wynosi {result}')
+print(f'The sum of the digits {any_number} is {result}')
