@@ -48,20 +48,4 @@ print(f'{time_string(0, 7, "12")}')
 print(f'{time_string(7, 30, "12")}')
 print(f'{time_string(12, 46, "12")}')
 print(f'{time_string(13, 10, "12")}')
-#  print(f'{time_string(19, 02, "12")}')
-
-
-"""
-        elif 12 < hours <= 23:
-            time_str = str(hours - 12) + ':' + str(minutes) + 'PM'
-        elif 12 < hours <= 23 and minutes < 10:
-            time_str = str(hours - 12) + ':' + '0' + str(minutes) + 'PM'
-        elif hours == 12 and minutes == 0:
-            time_str = str(hours) + ':' + '0' + str(minutes) + 'PM'
-        elif hours < 12 and minutes < 10:
-            time_str = str(hours) + ':' + '0' + str(minutes) + 'AM'
-        elif hours == 0:
-
-        elif hours < 12:
-            time_str = str(hours) + ':' + str(minutes) + 'AM'
-"""
+print(f'{time_string(19, 2, "12")}')
